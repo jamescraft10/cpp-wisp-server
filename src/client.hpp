@@ -7,9 +7,8 @@ class Client {
     public:
     Client() {
         curl = curl_easy_init();
-        if(!curl) {
-            throw new std::runtime_error("Couldn't init curl.");
-        }
+        if(!curl)
+            throw std::runtime_error("Couldn't init curl.");
     }
 
     void request(const char *host, const int port, const char *message) {
