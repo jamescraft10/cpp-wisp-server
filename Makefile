@@ -1,3 +1,7 @@
 all:
-	g++ -o build/main src/main.cpp -lcurl
-	build/main
+	g++ -o build/server src/server.cpp -Iinclude -lpthread
+	build/server
+	rm build/server
+
+build:
+	g++ -o build/server src/server.cpp -O3
